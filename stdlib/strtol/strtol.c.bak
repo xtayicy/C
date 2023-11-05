@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+	long lnumber;
+	char *str = "87654321",*endptr;
+
+	lnumber = strtol(str,&endptr,10);
+	printf("string = %s long = %ld\n",str,lnumber);
+
+	str = "123 this is";
+	lnumber = strtol(str,&endptr,10);
+	printf("string = %s long = %ld\n",str,lnumber);
+
+	str = "this is 123";
+	lnumber = strtol(str,&endptr,10);
+	printf("string = %s long = %ld\n",str,lnumber);
+}

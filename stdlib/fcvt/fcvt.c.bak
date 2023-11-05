@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+	把浮点数转换为字符串
+	ndigit：显示多少个数字
+	decpt:小数点在哪
+	sign：0代表正数，1代表负数
+*/
+void main(){
+	double value;
+	char *string;
+	int decpt,sign;
+	int ndigit = 10;
+
+	system("cls");
+	value = 9.876;
+	string = ecvt(value,ndigit,&decpt,&sign);
+	printf("string = %s decpt = %d sign = %d\n",string,decpt,sign);
+
+	value = -123.45;
+	ndigit = 15;
+	string = ecvt(value,ndigit,&decpt,&sign);
+	printf("string = %s decpt = %d sign = %d\n",string,decpt,sign);
+
+	value = 0.6789e5;
+	ndigit = 5;
+
+}
