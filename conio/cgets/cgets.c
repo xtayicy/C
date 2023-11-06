@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+	char str[83];
+	char *p;
+	
+	str[0] = 65;
+	printf("str = %s\n",str);
+	printf("Input some chars:");
+	p = cgets(str);
+	printf("\n cgets read %d characters: \"%s\"\n",str[1],p);
+	printf("The returned pointer is %p, str[0] is at %p\n", p, &str); 
+	
+	str[0] = 67;
+	printf("str = %s\n",str);
+	printf("Input some chars:");
+	printf("\n cgets read %d characters: \"%s\"\n",str[1],p);
+	printf("The returned pointer is %p, str[0] is at %p\n", p, &str); 
+}
